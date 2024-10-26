@@ -1,0 +1,33 @@
+<div class="d-flex flex-column">
+    <h5>New Movie Form</h5>
+    <form [formGroup]="movieForm" class="d-flex flex-column">
+        <mat-form-field>
+            <mat-label>Movie Name</mat-label>
+            <input matInput type="text" formControlName="movieName">
+            <mat-error>Movie Name is required</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Year of Production</mat-label>
+            <input matInput type="text" formControlName="yearOfProduction">
+            <mat-error>Year of Production is required</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Director</mat-label>
+            <input matInput type="text" formControlName="director">
+            <mat-error>Director is required</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>My Rating</mat-label>
+            <input matInput type="text" formControlName="myRating">
+            <mat-error>Rating is required</mat-error>
+        </mat-form-field>
+    </form>
+    <button
+        mat-flat-button
+        [disabled]="movieForm.invalid"
+        (click)= "onSubmit(movieForm.value)"
+    >
+        Submit
+    </button>
+
+</div>

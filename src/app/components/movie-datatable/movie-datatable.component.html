@@ -1,0 +1,28 @@
+<table class="table table-bordered table-striped text-wrap">
+    <thead>
+
+        <tr>
+            <th role="button" (click)="sortData('movieName')">Movie Name</th>
+            <th role="button" (click)="sortData('yearOfProduction')">Year of Production</th>
+            <th role="button" (click)="sortData('director')">Director</th>
+            <th role="button" (click)="sortData('myRating')">
+                My Rating <span [innerHTML]="sortSign('myRating')"></span>
+            </th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        @for (row of manyMovie; track row) {
+            <tr class="align-middle" (dblclick)="onMovieClick(row)">
+                <td>{{row.movieName}}</td>
+                <td>{{row.yearOfProduction}}</td>
+                <td>{{row.director}}</td>
+                <td>{{row.myRating}}</td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>

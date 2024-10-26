@@ -1,0 +1,22 @@
+@if (!movie) {
+    <div class="alert alert-danger text-center">No movie details</div>
+} @else {
+    <table class="table table-bordered w-50">
+        <tr>
+            <td class="fw-semibold">First Name</td>
+            <td class="ps-2">{{ movie.movieName}}</td>
+        </tr>
+        <tr>
+            <td class="fw-semibold">Year of Production</td>
+            <td class="ps-2">{{ movie.yearOfProduction}}</td>
+        </tr>
+        <tr>
+            <td class="fw-semibold">Director</td>
+            <td class="ps-2">{{ movie.director}}</td>
+        </tr>
+        <tr>
+            <td class="fw-semibold">My Rating</td>
+            <td class="ps-2">{{ movie.myRating}}</td>
+        </tr>
+    </table>
+}

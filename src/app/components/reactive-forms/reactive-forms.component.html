@@ -1,0 +1,8 @@
+<h4>Reactive Form</h4>
+<div class="d-flex gap-4">
+    <app-reactive-form-structure (movie)="onMovie($event)"></app-reactive-form-structure>
+    <div class="d-flex flex-column gap-4">
+        <app-movie-table [movie]="currentMovie"></app-movie-table>
+        <app-movie-datatable></app-movie-datatable>
+    </div>
+</div>
